@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações do Cliente</title>
+    <link rel="stylesheet" href="/static/styles/vermaiscliente.css">
+</head>
+
+<nav>
+    <ul>
+        <li>
+            <a href="/consusuarios">CONSULTA USUARIOS</a>
+        </li>
+        
+        <li>
+            <a href="/cadclientes">CADASTRO CLIENTES</a>
+        </li>
+
+        <li>
+            <a href="/cadfornecedor">CADASTRO FORNECEDORES</a>
+        </li>
+
+        <li>
+            <a href="/consuclientes">CONSULTAR CLIENTES</a>
+        </li>
+
+        <li>
+            <a href="/consufornece">CONSULTAR FORNECEDORES</a>
+        </li>
+
+        <li>
+            <a href="/logout">
+                <img class="logout" src="/static/assets/logout-removebg-preview.png" alt="">
+            </a>
+        </li>
+    </ul>
+    <img src="/static/assets/avatar/{{ l[4] }}" class="avatar" alt="" width="40px">
+
+</nav>
+<body>
+    <div class="info">
+        <h2>INFORMAÇÕES DO CLIENTE:</h2>
+    </div>
+
+    <div class="geral">
+        <div class="profile-details">
+            <p><strong>Nome:</strong> {{ cliente[1] }}</p><br>
+            <p><strong>E-mail:</strong> {{ cliente[2] }}</p> <br>
+            <p><strong>Telefone:</strong> {{ cliente[3] }}</p><br>
+            <P><strong>CPF:</strong> {{ cliente[9] }}</P><br>
+            <P><strong>Data de Cadastro:</strong> {{ cliente[10] }}</P><br>
+        </div>
+
+        <div class="endereco">
+            <p><strong>Rua:</strong> {{ cliente[4] }}</p> <br>
+            <p><strong>N°:</strong> {{ cliente[5] }}</p> <br>
+            <p><strong>Cidade:</strong> {{ cliente[6] }}</p> <br>
+            <p><strong>Estado:</strong> {{ cliente[7] }}</p> <br>
+            <p><strong>CEP:</strong> {{ cliente[8] }}</p><br>
+        </div>
+        <div>
+            <button>
+                <a href="/consuclientes">Voltar</a>
+            </button>
+        </div>
+    </div> 
+
+</body>
+</html>

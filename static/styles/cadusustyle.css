@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=League+Spartan:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cherry+Bomb+One&family=League+Spartan:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DynaPuff:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cherry+Bomb+One&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@1,100..900&display=swap');
+@import 'animate.css';
+
+:root{
+    --fonte1: 'League Spartan', 'sans-serif'; /*Fonte cadastre-se*/
+    --fonte2: 'Dynapuff', 'sans-serif'; /*Fonte slogan*/
+    --fonte3: 'Cherry Bomb One', 'sans-serif'; /*Fonte titulo*/
+    --font4: 'Montserrat', 'sans-serif'; /*Fonte botao*/
+    --animate-duration: 800ms;
+    --animate-delay: 0.9s;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url('/static/assets/fundo2.png');
+    background-size: cover; /*redimencionar a imagem de fundo e cobrir todo o espaço de tela*/
+    position: fixed;
+   
+}
+
+.bloco2{
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    top: 200px;
+    position: fixed;
+    z-index: 1;
+    font-family: var(--font4);
+    margin-left: 54%;
+    
+}
+
+ input{
+    width: 330px;
+    height: 40px;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 20px;
+    border:solid #eee8aa;
+    background-color: #eee8aa;
+    margin-left: 72%;
+    color: black;
+    font-family: var(--font4);
+    font-style: italic;
+    font-weight: bold;
+}
+.bloco2 h1{
+    font-family:var(--fonte1) ;
+    left: 1120px;
+    color: #5d7c39;
+    font-size: 40px;
+    margin-top:-2% ;
+    position: fixed;
+
+}
+.link a{
+    font-weight: bold;
+    left: 1160px;
+    font-style: italic;
+    color: #1d3105;
+    font-family: var(--font4);
+    position: fixed;
+    bottom: 210px;
+}
+
+button {
+    padding: 15px 30px;
+    background-color: #5d7c39;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    left: 77%;
+    position: fixed;
+    bottom: 140px;
+}
+
+button:hover {
+    background-color: #a3c779;
+}
+
+.nome1{
+    font-family: var(--fonte3);
+    color: #798b65;
+    font-size: 75px;
+    position: fixed;
+    left: 10%;
+    top: -10px;
+    display: inline-block;
+    margin: 0 0.5rem;
+
+    animation: bounce; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+.nome2{
+    font-family: var(--fonte3);
+    color:#798b65;
+    font-size: 60px;
+    left: 25%;
+    position: fixed;
+    top: 22%;
+    color: transparent; /* Deixa o preenchimento das letras transparente */
+    -webkit-text-stroke: 2px #798b65; /* Define a borda */ 
+    display: inline-block;
+    margin: 0 0.5rem;
+
+    animation: bounce; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+}
+   
+
+.animate__animated.animate__bounce {
+    --animate-duration: 2s;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.frase{
+    font-family:var(--fonte2) ;
+    position: fixed;
+    color: #798b65;
+    bottom: 300px;
+    font-size: 13px;
+    left: 85px;
+    top: 350px;
+}
+
+.gigi{
+    position: fixed;
+    right: 750px;
+    top: 30px;
+    display: inline-block;
+    margin: 0 0.5rem;
+
+    animation: bounce; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+    animation-iteration-count: infinite;
+}
+
+
+.estrela{
+    position: fixed;
+    left: 60px;
+    top: 15px;
+}
+
+.estrela2{
+    position: fixed;
+    right: 45%;
+    top: 15px;
+}
+
+.geral{
+    display: grid;
+    grid-template: 2fr 1fr;
+}
+
+.imgs{
+    position: fixed;
+    bottom: 5px;
+}
+
+.avatar a{
+    font-weight: bold;
+    font-family: var(--fonte1);
+    font-style: italic;
+    color: #1d3105;
+    left: 72%;
+    position: fixed;
+    font-size: 17px;
+    top: 450px;
+  
+}

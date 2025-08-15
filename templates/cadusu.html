@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se</title>
+    <link rel="stylesheet" href="../static/styles/cadusustyle.css">
+</head>
+<body>
+<div class="geral">
+  <div class="bloco1">
+    <div>
+        <img src="../static/assets/estrela.png" alt="" class="estrela">
+        <img src="../static/assets/estrela2.png" alt="" class="estrela2">
+    </div>
+
+    <div class="nome1">
+        <h1>Ghibli</h1>
+    </div>
+
+    <div class="nome2">
+        <h1>Plush</h1>
+    </div>
+
+    <div class="imgs">
+        <img src="/static/assets/totoro.png" alt="totoro" name="totoro" width="330px">
+        <img src="/static/assets/ponyo.png" alt="ponyo" width="330px">
+        <img src="/static/assets/calcifer.png" alt="calcifer" width="330px">
+    </div>
+
+    <div class="frase"><h1>A magia dos seus personagens favoritos, em pelúcia e carinho!</h1></div>
+    </div>
+
+    <div class="bloco2">
+        <h1>CADASTRE-SE</h1>
+
+        <div class="gigi"> <img src="/static/assets/gigi1.png" alt="gigi"></div>
+ 
+        <form action="/cadusu" method="POST" enctype="multipart/form-data">
+            <label for="nome"></label>
+            <input type="text" name="nome_usuario" id="nome_usuario" placeholder="Nome completo" required>
+            <br>
+            <label for="usuario"></label>
+            <input type="text" name="usuario" id="usuario" placeholder="Usuário" required>
+            <br>
+            <label for="senha"></label>
+            <input type="password" name="senha" id="senha" placeholder="Senha" required>
+            <br>
+            <input type="file" name="avatar" id="avatar" accept="image/*" required>
+            <label for="imagem" class="input-file-label"></label>
+            <br>
+            <div class="botao">
+                <button type="submit">Cadastrar</button>
+            </div>
+        </form>
+
+
+    <div class="link">
+        <a href="/login">Já tenho uma conta</a>
+    </div>
+</div>
+</body>
+</html>

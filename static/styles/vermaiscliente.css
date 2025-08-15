@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=League+Spartan:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cherry+Bomb+One&family=League+Spartan:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DynaPuff:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cherry+Bomb+One&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@1,100..900&display=swap');
+
+
+
+:root{
+    --fonte1: 'League Spartan', 'sans-serif'; /*Fonte cadastre-se*/
+    --fonte2: 'Dynapuff', 'sans-serif'; /*Fonte slogan*/
+    --fonte3: 'Cherry Bomb One', 'sans-serif'; /*Fonte titulo*/
+    --font4: 'Montserrat', 'sans-serif'; /*Fonte botao*/
+    --animate-duration: 800ms;
+    --animate-delay: 0.9s;
+    --cor-fundo:#eee8aa; 
+    --cor-padding:#5d7c39; /*cor do padding e header*/
+    --cor-letra: #a8b462; /*Cdastre o cliente*/
+}
+
+body{
+    background-color: #a8b462;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    background-color: var(--cor-padding);
+    justify-content: center;
+}
+ 
+nav ul li {
+    margin: 0 15px;
+}
+ 
+.logout{
+    width:30px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    font-family: var(--fonte1);
+}
+
+
+.geral{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1150px;
+    padding: 20px 20px;
+    background-color: #b8c56a;
+    border-radius: 40px;
+    color: white;
+    font-family: var(--fonte1);
+    margin-top: 150px;
+    font-size: 20px;
+    left: 13%;
+    position: relative;
+}
+
+
+
+button{
+    padding: 15px 30px ;
+    background-color: #5d7c39;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 20px;
+    left: 45%;
+    position: fixed;
+    margin-top: 20px;
+    font-family: var(--fonte1);
+    bottom: 220px;
+}
+
+button:hover {
+    background-color: #a3c779;
+    align-items: center;
+}
+
+h2{
+    position: fixed;
+    left: 35%;
+    font-family: var(--fonte1);
+    color: #5d7c39;
+    font-size: 35px;
+    top: 145px;
+    
+}
+
+a{
+    text-decoration: none;
+    font-family: var(--fonte1);
+    color: white;
+}
+
+.avatar{
+    position: fixed;
+    left: 95%;
+    top: 0.5%;
+    border-radius: 50px;
+}

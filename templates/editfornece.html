@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Cadastro</title>
+    <link rel="stylesheet" href="/static/styles/editarfone.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="/consusuarios">CONSULTA USUARIOS</a>
+            </li>
+            
+            <li>
+                <a href="/cadclientes">CADASTRO CLIENTES</a>
+            </li>
+
+            <li>
+                <a href="/cadfornecedor">CADASTRO FORNECEDORES</a>
+            </li>
+
+            <li>
+                <a href="/consuclientes">CONSULTAR CLIENTES</a>
+            </li>
+
+            <li>
+                <a href="/consufornece">CONSULTAR FORNECEDORES</a>
+            </li>
+
+            <li>
+                <a href="/logout">
+                    <img class="logout" src="/static/assets/logout-removebg-preview.png" alt="">
+                </a>
+            </li>
+        </ul>
+        <img src="/static/assets/avatar/{{ l[4] }}" class="avatar" alt="" width="40px">
+
+    </nav>
+ 
+    <div class="conteudo">
+        <h2>Editar Cadastro do Fornecedor</h2>
+        <form action="/editfornece/{{ fornecedor[0] }}" method="post" enctype="multipart/form-data">
+            <div class="campo-form">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" value="{{ fornecedor[1] }}" required>
+            </div>
+ 
+            <div class="campo-form">
+                <label for="email">Email:</label>
+                <input type="email" name="email" value="{{ fornecedor[2] }}" required>
+            </div>
+ 
+            <div class="campo-form">
+                <label for="telefone">Telefone:</label>
+                <input type="text" name="telefone" value="{{ fornecedor[3] }}" required>
+            </div>
+
+            <div class="campo-form">
+                <label for="telefone">Site:</label>
+                <input type="url" name="site" value="{{ fornecedor[4] }}" required>
+            </div>
+
+            <div class="campo-form">
+                <label for="ende_rua">Rua:</label>
+                <input type="text" name="ende_rua" value="{{ fornecedor[5] }}" required>
+            </div>
+
+            <div class="campo-form">
+                <label for="ende_num">N°:</label>
+                <input type="number" name="ende_num" value="{{ fornecedor[6] }}" required>  
+            </div>
+
+            <div class="campo-form">
+                <label for="ende_cidade">Cidade:</label>
+                <input type="text" name="ende_cidade" value="{{ fornecedor[7] }}" required>
+            </div>
+
+            <div class="campo-form">
+                <label for="ende_estado">Estado:</label>
+                <input type="text" name="ende_estado" value="{{ fornecedor[8] }}" required>
+            </div>
+
+            <div class="campo-form">
+                <label for="ende_cep">CEP:</label>
+                <input type="text" name="ende_cep" value="{{ fornecedor[9] }}" required>
+            </div>
+
+
+            <div class="campo-form">
+                <label for="data_cadastro">Data de Cadastro:</label>
+                <input type="date" name="data_cadastro" value="{{ fornecedor[10] }}" required>
+            </div>
+
+            <div class="campo-form">
+                <label for="cnpj">CNPJ:</label>
+                <input type="text" name="cnpj" value="{{ fornecedor[11]}}">
+            </div>
+ 
+            <button type="submit">Salvar Alterações</button>
+        </form>
+        <div class="imgs"><img src="/static/assets/fuligem.png" width="500px"></div>
+    </div>
+</body>
+</html>

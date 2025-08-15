@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONSULTA USUARIOS</title>
+    <link rel="stylesheet" href="static/styles/consusuarios.css">
+</head>
+<nav>
+    <ul>
+        <li>
+            <a href="/consusuarios">CONSULTA USUARIOS</a>
+        </li>
+        <li>
+            <a href="/cadclientes">CADASTRO CLIENTES</a>
+        </li>
+
+        <li>
+            <a href="/cadfornecedor">CADASTRO FORNECEDORES</a>
+        </li>
+
+        <li>
+            <a href="/consuclientes">CONSULTAR CLIENTES</a>
+        </li>
+
+        <li>
+            <a href="/consufornece">CONSULTAR FORNECEDORES</a>
+        </li>
+        <li>
+            <a href="/logout">
+                <img class="logout" src="/static/assets/logout-removebg-preview.png" alt="">
+            </a>
+        </li>
+    </ul>
+
+    <img src="/static/assets/avatar/{{ l[4] }}" class="avatar" alt="" width="40px">
+</nav>
+<body>
+    <div class="table-container">
+        <div class="bemvindo">
+            <h2>Bem Vinda (o), {{ nome_usuario }} (≧ᗜ≦)!</h2> <h3>Usuários Cadastrados:</h3>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>USUÁRIO</th>
+                    <th>SENHA</th>
+                    <th>NOME</th>
+                    <th>AVATAR</th>
+                    <th>OPÇÕES</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for usuario in usuarios %}
+                <tr>
+                    <td>{{ usuario[0] }}</td>
+                    <td>{{ usuario[1] }}</td>
+                    <td>{{ usuario[2] }}</td>
+                    <td>{{ usuario[3] }}</td>
+                    <td>
+                        {% if usuario[4] %}
+                            <img src="{{ url_for('static', filename='assets/avatar/' + usuario[4].split('/')[-1]) }}" alt="{{ usuario[1] }}" width="70">
+                        {% else %}
+                            Sem imagem
+                        {% endif %}
+                    </td>
+                    <td>
+                        <a href="/editusuario/{{ usuario[0] }}" class="link_editar">Editar</a>
+                        <a href="/excluirusuario/{{ usuario[0] }}" class="link_excluir">Excluir</a>                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    
+</body>
+</html>

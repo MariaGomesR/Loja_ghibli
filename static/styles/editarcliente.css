@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=League+Spartan:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cherry+Bomb+One&family=League+Spartan:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DynaPuff:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cherry+Bomb+One&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@1,100..900&display=swap');
+
+
+
+:root{
+    --fonte1: 'League Spartan', 'sans-serif'; /*Fonte cadastre-se*/
+    --fonte2: 'Dynapuff', 'sans-serif'; /*Fonte slogan*/
+    --fonte3: 'Cherry Bomb One', 'sans-serif'; /*Fonte titulo*/
+    --font4: 'Montserrat', 'sans-serif'; /*Fonte botao*/
+    --animate-duration: 800ms;
+    --animate-delay: 0.9s;
+    --cor-fundo:#eee8aa; 
+    --cor-padding:#5d7c39; /*cor do padding e header*/
+    --cor-letra: #a8b462; /*Cdastre o cliente*/
+}
+
+body{
+    background-color: #eee8aa;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    background-color: var(--cor-padding);
+    justify-content: center;
+}
+ 
+nav ul li {
+    margin: 0 15px;
+}
+ 
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    font-family: var(--fonte1);
+}
+
+.logout{
+    width:30px;
+}
+
+input{
+    width: 500px;
+    height: 30px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    border:solid var(--cor-letra);
+    background-color: var(--cor-letra);
+    color: white;
+    font-family: var(--font4);
+    font-style: italic;
+    font-weight: bold;
+    gap: 2px;
+    opacity: 85%;
+    position: relative;
+    
+
+}
+    
+
+.conteudo{
+    font-family:var(--fonte1) ;
+    color: var(--cor-letra);
+    font-size: 25px;
+    position: fixed;
+    margin-top: 25px;
+    margin-left: 25%;
+    size: 100px;
+    align-items: center;
+
+}
+
+button{
+    padding: 10px 20px;
+    background-color: var(--cor-letra);
+    color: white;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 15px;
+    left: 45%;
+    position: fixed;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #a3c779;
+    align-items: center;
+}
+
+
+.conteudo-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide em duas colunas */
+    gap: 10px; /* Espaçamento entre os itens */
+    max-width: 400px;
+}
+.conteudo-inputs label {
+    grid-column: span 1; /* Cada label ocupa uma coluna */
+    text-align: right;
+    padding-right: 10px;
+}
+
+.conteudo h2{
+    position: relative;
+    left: 20%;
+    
+}
+
+.imgs{
+    position:fixed;
+    left: 65%;
+    bottom: -10px;
+}
+
+.avatar{
+    position: fixed;
+    left: 95%;
+    top: 0.5%;
+    border-radius: 50px;
+}

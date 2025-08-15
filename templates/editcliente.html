@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Cadastro</title>
+    <link rel="stylesheet" href="/static/styles/editarcliente.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="/consusuarios">CONSULTA USUARIOS</a>
+            </li>
+            
+            <li>
+                <a href="/cadclientes">CADASTRO CLIENTES</a>
+            </li>
+
+            <li>
+                <a href="/cadfornecedor">CADASTRO FORNECEDORES</a>
+            </li>
+
+            <li>
+                <a href="/consuclientes">CONSULTAR CLIENTES</a>
+            </li>
+
+            <li>
+                <a href="/consufornece">CONSULTAR FORNECEDORES</a>
+            </li>
+
+            <li>
+                <a href="/logout">
+                    <img class="logout" src="/static/assets/logout-removebg-preview.png" alt="">
+                </a>
+            </li>
+
+        </ul>
+        <img src="/static/assets/avatar/{{ l[4] }}" class="avatar" alt="" width="40px">
+
+    </nav>
+ 
+    <div class="conteudo">
+        <h2>Editar Cadastro do Cliente</h2>
+        <form action="/editcliente/{{ cliente[0] }}" method="post" enctype="multipart/form-data">
+            <div class="campo-form">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome_completo" value="{{ cliente[1] }}" required>
+            </div>
+ 
+            <div class="campo-form">
+                <label for="email">Email:</label>
+                <input type="email" name="email" value="{{ cliente[2] }}" required>
+            </div>
+ 
+            <div class="campo-form">
+                <label for="telefone">Telefone:</label>
+                <input type="text" name="telefone" value="{{ cliente[3] }}" required>
+            </div>
+
+        
+            <div class="campo-form">
+                <label for="ende_rua">Rua:</label>
+                <input type="text" name="ende_rua" value="{{ cliente[4] }}" required>
+            </div>
+
+            <div class="campo-form">
+                <label for="ende_num">Número:</label>
+                <input type="text" name="ende_num" value="{{ cliente[5] }}" required>
+            </div>
+
+            <div class="campo-form">
+                <label for="ende_cidade">Cidade:</label>
+                <input type="text" name="ende_cidade" value="{{ cliente[6] }}" required>
+            </div>
+
+            <div class="campo-form">
+                <label for="ende_estado">Estado:</label>
+                <input type="text" name="ende_estado" value="{{ cliente[7] }}" required>
+            </div>
+
+            <div class="campo-form">
+                <label for="ende_cep">CEP:</label>
+                <input type="text" name="ende_cep" value="{{ cliente[8] }}" required>
+            </div>
+
+
+            <div class="campo-form">
+                <label for="data_cadastro">Data de Cadastro:</label>
+                <input type="date" name="data_cadastro" value="{{ cliente[9] }}" required>
+            </div>
+
+            <div class="campo-form">
+                <label for="cpf">CPF:</label>
+                <input type="text" name="cpf" value="{{ cliente[10] }}" required>
+            </div>
+
+
+ 
+            <button type="submit">Salvar Alterações</button>
+        </form>
+
+        <div class="imgs"><img src="/static/assets/mini totoros.png" alt="mini" width="500px"></div>
+
+    </div>
+</body>
+</html>

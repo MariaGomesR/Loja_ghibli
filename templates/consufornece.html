@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Fornecedores</title>
+    <link rel="stylesheet" href="static/styles/consufornece.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="/consusuarios">CONSULTA USUARIOS</a>
+            </li>
+            
+            <li>
+                <a href="/cadclientes">CADASTRO CLIENTES</a>
+            </li>
+            <li>
+                <a href="/cadfornecedor">CADASTRO FORNECEDORES</a>
+            </li>
+            <li>
+                <a href="/consuclientes">CONSULTAR CLIENTES</a>
+            </li>
+            <li>
+                <a href="/consufornece">CONSULTAR FORNECEDORES</a>
+            </li>
+            <li>
+                <a href="/logout">
+                    <img class="logout" src="/static/assets/logout-removebg-preview.png" alt="">
+                </a>
+            </li>
+        </ul>
+        <img src="/static/assets/avatar/{{ l[4] }}" class="avatar" alt="" width="40px">
+
+    </nav>
+    <div class="gato3"><img src="/static/assets/gato3.png" alt="" width="210px"></div>
+    <div class="kiki2"><img src="/static/assets/kiki2.png" alt="" width="200px"></div>
+
+    <div class="table-container">
+        <div class="bemvindo">
+            <h2>Bem Vinda (o), {{ nome_usuario }} ૮₍ ˶ᵔ ᵕ ᵔ˶ ₎ა!!</h2> <h3>Fornecedores Cadastrados</h3>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Telefone</th>
+                    <th>Site</th>
+                    <th>Data de Cadastro</th>
+                    <th>Opções</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for fornecedor in fornecedores %}
+                <tr>
+                    <td>{{ fornecedor[0] }}</td>
+                    <td>{{ fornecedor[1] }}</td>
+                    <td>{{ fornecedor[2] }}</td>
+                    <td>{{ fornecedor[3] }}</td>
+                    <td>{{ fornecedor[4] }}</td>
+                    <td>{{ fornecedor[10] }}</td>
+                    <td>
+                        <a href="/editfornece/{{ fornecedor[0] }}" class="link_editar">Editar</a>
+                        <a href="/excluirfornece/{{ fornecedor[0] }}" class="link_excluir">Excluir</a>
+                        <a href="/vermaisfornece/{{ fornecedor[0] }}" class="link_vermais">Ver</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    
+</body>
+</html>

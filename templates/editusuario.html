@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Cadastro</title>
+    <link rel="stylesheet" href="/static/styles/editarusu.css">
+</head>
+<nav>
+    <ul>
+        <li>
+            <a href="/consusuarios">CONSULTA USUARIOS</a>
+        </li>
+        
+        <li>
+            <a href="/cadclientes">CADASTRO CLIENTES</a>
+        </li>
+
+        <li>
+            <a href="/cadfornecedor">CADASTRO FORNECEDORES</a>
+        </li>
+
+        <li>
+            <a href="/consuclientes">CONSULTAR CLIENTES</a>
+        </li>
+
+        <li>
+            <a href="/consufornece">CONSULTAR FORNECEDORES</a>
+        </li>
+        
+        <li>
+            <a href="/logout">
+                <img class="logout" src="/static/assets/logout-removebg-preview.png" alt="">
+            </a>
+        </li>
+    </ul>
+    <img src="/static/assets/avatar/{{ l[4] }}" class="avatar" alt="" width="40px">
+
+</nav>
+<body>
+    <div class="geral">
+        <h2>Editar Cadastro do Usuário</h2>
+        <form action="/editusuario/{{ usuario[0] }}" method="post" enctype="multipart/form-data">
+            <div class="campo-form">
+                <label for="nome">Usuário:</label>
+                <input type="text" name="usuario" value="{{ usuario[1] }}">
+            </div>
+ 
+            <div class="campo-form">
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" value="{{ usuario[2] }}">
+            </div>
+ 
+            <div class="campo-form">
+                <label for="nome_usuario">Nome completo:</label>
+                <input type="text" name="nome_usuario" value="{{ usuario[3] }}">
+            </div>
+
+            <button type="submit">Salvar Alterações</button>
+        </form>
+    </div>
+    
+</body>
+</html>

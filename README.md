@@ -1,6 +1,6 @@
 <h1 align="center">Ghibli Plush 🍃</h1>
 
-![print header](/static/assets/banner.png)
+ ![print header](/static/assets/banner.png)
 
 
 

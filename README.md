@@ -1,6 +1,6 @@
 <h1 align="center">Ghibli Plush 🍃</h1>
 
- ![print header](/static/assets/banner.png)
+<img width="1200" height="276" alt="image" src="https://github.com/MariaGomesR/Loja_ghibli/blob/main/static/assets/banner.png" />
 
 
 
